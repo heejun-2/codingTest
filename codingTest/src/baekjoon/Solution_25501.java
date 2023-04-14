@@ -1,29 +1,37 @@
 package baekjoon;
 
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class Solution_25501 {
 
-    public static String recursion(String s, int l, int r, int count){
+    public static int recursion(String s, int l, int r){
     	count++;
-        if(l >= r) return 1+" "+count;
-        else if(s.charAt(l) != s.charAt(r)) return 0+" "+count;
-        else return recursion(s, l+1, r-1, count);
+        if(l >= r) return 1;
+        else if(s.charAt(l) != s.charAt(r)) return 0;
+        else return recursion(s, l+1, r-1);
     }
-    public static String isPalindrome(String s){
+    public static int isPalindrome(String s){
     	int count = 0;
-        return recursion(s, 0, s.length()-1, count);
+        return recursion(s, 0, s.length()-1);
     }
     
-    public static void main(String[] args){
-    	Scanner sc = new Scanner(System.in);
+    static int count = 0;
+    
+    public static void main(String[] args) throws IOException{
+    	BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    	StringBuilder sb = new StringBuilder();
     	
-    	int T = sc.nextInt();
+    	int T = Integer.parseInt(br.readLine());
     	
     	for(int i = 0; i < T; i++) {
-    		String str = sc.next();
-    		System.out.println(isPalindrome(str));
+    		String str = br.readLine();
+    		count = 0;
+    		sb.append(isPalindrome(str)).append(" ").append(count).append("\n");
     	}
+    	br.close();
+    	System.out.println(sb.toString());
 
     }
 
