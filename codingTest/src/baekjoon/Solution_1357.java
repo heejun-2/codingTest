@@ -23,15 +23,9 @@ public class Solution_1357 {
 
 	private static int Rev(String s) {
 		// TODO Auto-generated method stub
-		char[] arr = s.toCharArray();
+		StringBuilder sb = new StringBuilder(s);
 		
-		String str = "";
-		
-		for(int i = arr.length-1; i >= 0; i--) {
-			str += arr[i];
-		}
-		
-		int num = Integer.parseInt(str);
+		int num = Integer.parseInt(sb.reverse().toString());
 		
 		return num;
 	}
