@@ -21,15 +21,14 @@ public class Solution_2947 {
 		
 		StringBuilder sb = new StringBuilder();
 		
-		while(true) {
+		while(isPass) {
+			isPass = false;
+			
 			for(int i = 0; i < 4; i++) {
 				
-				if(arr[0] == 1 && arr[1] == 2 && arr[2] == 3 && arr[3] == 4 && arr[4] == 5) {
-					isPass = false;
-					break;
-				}
-				
 				if(arr[i] > arr[i+1]) {
+					isPass = true;
+					
 					int tmp = arr[i];
 					arr[i] = arr[i+1];
 					arr[i+1] = tmp;
@@ -41,10 +40,7 @@ public class Solution_2947 {
 				}
 
 			}
-			
-			if(!isPass) {
-				break;
-			}
+
 		}
 		
 		System.out.println(sb.toString());
