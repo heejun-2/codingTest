@@ -1,6 +1,6 @@
 package programmers;
 
-public class Solution_7 {
+public class Solution_07 {
 	// 콜라 문제
 	public int solution(int a, int b, int n) {
         int answer = 0;
