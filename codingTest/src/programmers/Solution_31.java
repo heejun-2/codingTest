@@ -1,6 +1,6 @@
 package programmers;
 
-public class Soluiton_31 {
+public class Solution_31 {
 	// 문자열 내 p와 y의 개수
 	boolean solution(String s) {
         int p = 0;
