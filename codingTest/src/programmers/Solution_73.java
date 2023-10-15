@@ -16,4 +16,5 @@ public class Solution_73 {
 
         return day[number % 7];
     }
+
 }
