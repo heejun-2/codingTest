@@ -17,7 +17,6 @@ public class Solution_99 {
                 set.add(sum);
             }
         }
-
         return set.size();
     }
 }
