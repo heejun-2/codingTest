@@ -17,16 +17,9 @@ public class Solution_4406 {
 		for(int tc = 1; tc <= T; tc++) {
 			String s = br.readLine();
 			
-			String result = "";
+			s = s.replaceAll("[aeiou]", "");
 			
-			for(int i = 0; i < s.length(); i++) {
-				char c = s.charAt(i);
-				if(c != 'a' && c != 'e' && c != 'i' && c != 'o' && c != 'u') {
-					result += c;
-				}
-			}
-			
-			sb.append("#"+tc+" "+result).append("\n");
+			sb.append("#"+tc+" "+s).append("\n");
 		}
 		
 		System.out.println(sb.toString());
