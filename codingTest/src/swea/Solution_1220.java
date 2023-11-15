@@ -32,16 +32,13 @@ public class Solution_1220 {
 			for(int i = 0; i < 100; i++) {
 				for(int j = 0; j < 100; j++) {
 					
-					if(arr[i][j] == 1) {
-						if(i+1 == N) break;
-						
+					if(arr[i][j] == 1 && i+1 != N) {
 						if(arr[i+1][j] == 2) {
 							cnt++;
 						}
 						else {
 							arr[i+1][j] = 1;
 						}
-						
 					}
 					
 				}
