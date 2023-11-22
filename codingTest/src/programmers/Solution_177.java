@@ -1,0 +1,28 @@
+package programmers;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
+public class Solution_177 {
+	// 수 조작하기1
+	public int solution(int n, String control) {
+        for(int i = 0; i < control.length(); i++) {
+        	char c = control.charAt(i);
+        	if(c == 'w') {
+        		n += 1;
+        	}
+        	else if(c == 's') {
+        		n -= 1;
+        	}
+        	else if(c == 'd') {
+        		n += 10;
+        	}
+        	else if(c == 'a') {
+        		n -= 10;
+        	}
+        }
+        
+        return n;
+    }
+
+}
